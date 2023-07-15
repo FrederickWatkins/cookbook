@@ -15,12 +15,13 @@
 \usepackage{utfsym}
 \usepackage{fontawesome}
 \usepackage{titlesec}
+\usepackage{titletoc}
 
 \titleformat
 {\chapter} % command
 [display] % shape
 {\Huge\bfseries} % format
-{} % label
+{\centering Chapter \thechapter .} % label
 {0.5ex} % sep
 {
     \vspace{1ex}
@@ -40,6 +41,13 @@
 [
 ] % after-code
 
+\titlecontents{section}[2em]
+{}%
+{}% numbered sections formatting
+{\itshape}% unnumbered sections formatting
+{{\hspace{0.4em}\titlerule*[6pt]{.}}\contentspage}%
+
+
 \titleformat
 {\subsection} % command
 [display] % shape
@@ -49,16 +57,25 @@
 {
 } % before-code
 [
+    \vspace{2ex}
 ] % after-code
+
+\titlecontents{subsection}[4em]
+{}%
+{}% numbered sections formatting
+{\itshape}% unnumbered sections formatting
+{{\hspace{0.4em}\titlerule*[6pt]{.}}\contentspage}%
 
 \newcommand{\gray}{\rowcolor[gray]{.90}} 
 
-\title{cookbook}
+\title{\Huge\textbf{cookbook}}
 \author{Frederick Watkins}
 
 \begin{document}
 
 \selectlanguage{UKenglish}
+
+\maketitle
 
 \tableofcontents
 
@@ -76,21 +93,20 @@
 
 \begin{multicols}{2}
         Equipment:
-
         {\begin{itemize}
             \item Burger press
             \item BBQ (Ideally coal)
         \end{itemize}}
         Ingredients:
 
-        For the burger patty
+        For the burger patty:
         {\begin{itemize}
             \item 400g minced beef
             \item 1 egg (Beaten but not aerated)
             \item Rosemary
             \item Thyme
         \end{itemize}}
-        For the burger
+        For the burger:
         {\begin{itemize}
             \item Brioche/sourdough bun (personal preference)
             \item Emmenthal cheese (sliced)
@@ -154,8 +170,6 @@
     \gray \faFire\space Cooking time: & \textbf{60 minutes}\\
     \gray \faUser\space Serves: & \textbf{8 people}\\
 \end{tabularx}
-
-\paragraph{}
 
 \begin{multicols}{2}
     Equipment:
