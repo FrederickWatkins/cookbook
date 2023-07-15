@@ -14,6 +14,42 @@
 \usepackage{colortbl}
 \usepackage{utfsym}
 \usepackage{fontawesome}
+\usepackage{titlesec}
+
+\titleformat
+{\chapter} % command
+[display] % shape
+{\Huge\bfseries} % format
+{} % label
+{0.5ex} % sep
+{
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+] % after-code
+
+\titleformat
+{\section} % command
+[display] % shape
+{\huge\bfseries} % format
+{} % label
+{0.5ex} % sep
+{
+} % before-code
+[
+] % after-code
+
+\titleformat
+{\subsection} % command
+[display] % shape
+{\Large\bfseries} % format
+{} % label
+{0.5ex} % sep
+{
+} % before-code
+[
+] % after-code
 
 \newcommand{\gray}{\rowcolor[gray]{.90}} 
 
